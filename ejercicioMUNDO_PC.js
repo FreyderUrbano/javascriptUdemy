@@ -11,7 +11,7 @@ class dispositivoEntrada {
     this._tipoEntrada = tipoEntrada;
   }
 
-  get marca() {
+  get marca() {//cambios
     return this._marca;
   }
   set marca(marca) {
