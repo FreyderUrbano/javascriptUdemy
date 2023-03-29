@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MANEJO DE DOM CON JAVASCRIT</title>
+  </head>
+  <body>
+    <!--
+    -->
+    <h1 id="titulo">TITULO DEL DOCUMENTO</h1>
+    <br />
+    <div id="mostrar"></div>
+    <script>
+      document.getElementById("titulo").onclick = cambiarTexto();
+      function cambiarTexto() {
+        ducument.getElementById("mostrar").innerHTML = "NUEVO CONTENIDO";
+      }
+    </script>
+  </body>
+</html>
