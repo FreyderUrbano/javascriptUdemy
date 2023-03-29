@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MANEJO DE DOM CON JAVASCRIT</title>
+  </head>
+  <body>
+    <h1 onClick="cambiarTexto(this)">TITULO DEL DOCUMENTO</h1>
+    <button onClick="cambiarColorTitulo()">CAMBIAR COLOR TITULO</button>
+    <br/>
+    <script>
+      function cambiarTexto(titulo) {
+        titulo.innerHTML = 'CAMBIO DE TITULO CLICADO';
+      }
+    </script>
+  </body>
+</html>
