@@ -5,12 +5,18 @@
     <title>MANEJO DE DOM CON JAVASCRIT</title>
   </head>
   <body>
+    <!--
+colocando el evento onclick dentro de la etiqueta h1 se puede cambiar el contenido de esta
+creamos el evento onclick cambiarTexto() dentro de h1 y dentro del script creamos la funcion del
+mismo nobre para mediante el paso de un parametro y usando innerHTML cambiamos el texto de h1 al 
+dar click sobre el texto
+    -->
     <h1 onClick="cambiarTexto(this)">TITULO DEL DOCUMENTO</h1>
     <button onClick="cambiarColorTitulo()">CAMBIAR COLOR TITULO</button>
-    <br/>
+    <br />
     <script>
       function cambiarTexto(titulo) {
-        titulo.innerHTML = 'CAMBIO DE TITULO CLICADO';
+        titulo.innerHTML = "CAMBIO DE TITULO CLICADO";
       }
     </script>
   </body>
