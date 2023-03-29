@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>queryselectorAll</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <!--
+        metodo queryselectorall
+        sirve para recuperar los elementos contenidos no solo con la clase si no tambien 
+        con el elemento html que queremos recuperar.
+    -->
+
+    <h1 class="red" id="cabecero">EJEMPLO DOM CON JAVASCRIPT</h1>
+    <p class="azul">Saludos</p>
+    <p class="azul">OTRO PARRAFO NUEVO</p>
+
+    <script>
+      let elementos = document.querySelectorAll("h1.red, p.azul");
+      console.log(`Numero dt elementos: ${elementos.length}`);
+      for (let elemento of elementos) {
+        console.log(`${elemento.innerHTML}`);
+      }
+    </script>
+  </body>
+</html>

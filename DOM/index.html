@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM CON JAVASCRIPT</title>
+  </head>
+  <body>
+    <h1 id="cabecero">EJEMPLO DOM CON JAVASCRIPT</h1>
+    <p id="parrafo">Saludos</p>
+
+    <script>//la propiedad innerhtml toma la informacion interna de un html 
+      let cabecero = document.getElementById("cabecero");
+      //console.log('valor cabecero' + cabecero.innerHTML); modo normar
+      console.log(`valor cabecero ${cabecero.innerHTML}`); //modo TEMPLATE LITERAL
+      let parrafo = document.getElementById("parrafo");
+      console.log(`valor parrafo ${parrafo.innerHTML}`);
+      parrafo.innerHTML = "NUEVO PARRAFO INGRESADO CON INNERHTML";
+      cabecero.innerHTML = "NUEVO CABECERO CAMBIADO CON INNERHTML";
+    </script>
+  </body>
+</html>
