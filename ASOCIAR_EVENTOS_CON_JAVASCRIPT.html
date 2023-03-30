@@ -11,9 +11,11 @@
     <br />
     <div id="mostrar"></div>
     <script>
-      document.getElementById("titulo").onclick = cambiarTexto();
+      document.getElementById("titulo").onclick = cambiarTexto;
+
       function cambiarTexto() {
-        ducument.getElementById("mostrar").innerHTML = "NUEVO CONTENIDO";
+        document.getElementById("mostrar").innerHTML =
+          "NUEVO CONTENIDO MODIFICADO para el nuevo div";
       }
     </script>
   </body>
