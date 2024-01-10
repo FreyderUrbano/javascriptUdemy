@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ASOCIAR EVENTOS CON DOM Y JAVASCRIPT</title>
+  </head>
+  <body>
+    <!-- 
+      en h1 asignamos un id y desde javascrpt lo tomamos y asociamos el evento 
+      onclick y llamamos a la funcion callback cambiarTexto
+    -->
+    <h1 id="titulo">TITULO DEL DOCUMENTO</h1>
+    <br />
+    <div id="mostrar"></div>
+    <script>
+      document.getElementById('titulo').onclick = nuevoContenido; 
+
+      function nuevoContenido(){
+        document.getElementById('mostrar').innerHTML = 'NUEVO CONTENIDO EN EL DIV CREADO';
+        document.getElementById('titulo').innerHTML = 'NUEVO TITULO';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANEJO EVENTO ONLOAD EN JAVASCRIPT</title>
+</head>
+<!-- evento de tipo onload: se ejecuta cuando se carga la pagina web y llama al metodo 
+    entrar.
+    En la etiqueta body usamos el evento onload y creamos la funcion entrar
+    luego dentro de la etiqueta script creo la funcion entrar y creamos la alerta 
+-->
+
+<!-- COMO EJEMPLO SE USA EL EVENTO ONLOAD PARA MOSTRAR PRIMERO UN ALERT 
+    Y LUEGO VALIDAR SI LAS COOKIES ENTAN HABILITADAS 
+-->
+
+<body onload="entrar()">
+    <h1 id="titulo">Manejo evento onload</h1>
+    <br/>
+    <div id="mostrar"></div>
+    <script>
+
+        function entrar(){
+            alert('Entrando a la pagina WEB');
+            let texto = "";
+            if (navigator.cookieEnabled) {
+                texto = 'Cookies habilitadas';
+            }
+            else {texto = 'Cookies inabilitadas'};
+            document.getElementById('mostrar').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

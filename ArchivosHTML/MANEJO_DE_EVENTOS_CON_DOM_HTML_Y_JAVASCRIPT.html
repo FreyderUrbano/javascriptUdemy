@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
     <title>MANEJO DE EVENTOS CON DOM Y JAVASCRIT</title>
   </head>
-  <body onload="entrar()">
-    <!--
-colocando el evento onclick dentro de la etiqueta h1 se puede cambiar el contenido de esta
-creamos el evento onclick cambiarTexto() dentro de h1 y dentro del script creamos la funcion del
-mismo nobre para mediante el paso de un parametro y usando innerHTML cambiamos el texto de h1 al 
-dar click sobre el texto
+  <body>
+    <!-- Colocar el evento cambiar de texto al clicar sobre el titulo
+    al estar en la etiqueta html h1 se puede colocar sintaxis javascript en el evento onclick
+    direcatamente asi: this apunta a la etiqueta h1 accediendo a sus atributos, en este caso
+    accede a innerHTML para cambiar el titulo. ESTO NO ES UNA BUENA PRACTICA 
     -->
-    <h1 onClick="cambiarTexto(this)">TITULO DEL DOCUMENTO</h1>
-    <button onClick="cambiarColorTitulo()">CAMBIAR COLOR TITULO</button>
+    <!-- <h1 onclick="this.innerHTML='NUEVO TEXTO'">TEXTO INICIAL</h1> -->
+    <!-- <button onClick="cambiarTexto()">Cambiar Texto</button> -->
+
+    <!-- lo que se debe hacer es crear un metodo y colocarlo dentro de onclick en h1
+    colocando como parametro this
+    -->
+
+    <h1 onclick="cambiarTexto(this)">TEXTO INICIAL</h1>
     <br />
+    <!-- cambioTitulo apunta a h1 accediendo a sus atributos y metodos-->
     <script>
-      function cambiarTexto(titulo) {
-        titulo.innerHTML = "CAMBIO DE TITULO CLICADO";
+      function cambiarTexto(cambioTitulo) {
+        console.log(cambioTitulo);
+        console.log(cambioTitulo.innerHTML);
+        cambioTitulo.innerHTML = "EL TEXTO CAMBIA AL CLICAR SOBRE TEXTO INICIAL";
+        console.log(cambioTitulo.innerHTML);
       }
     </script>
   </body>

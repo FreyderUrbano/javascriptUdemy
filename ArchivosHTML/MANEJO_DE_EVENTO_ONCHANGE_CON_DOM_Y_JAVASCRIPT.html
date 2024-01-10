@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANEJO EVENTO ONCHANGE</title>
+</head>
+<!-- Se crea un campo de tipo input para solicitar un nombre.
+    dentro de la etiqueta input se usa el evento onchange y se crea el metodo 
+    convertir y se pasa como parametro this quien apunta a la etiqueta input.
+    luego dentro de la etiqueta script se crea la funcion convertir con el parametro 
+    nombreInput quien apunta a this y a la vez a input 
+-->
+<body>
+        <h1 id="titulo">MANEJO EVENTO ONCHANGE</h1>
+        <br/>
+        Nombre: <input type="text" onchange="convertir(this)"/>
+        <script>
+            function convertir(nombreInput){
+                nombreInput.value = nombreInput.value.toUpperCase();
+            }
+        </script>
+    
+</body>
+</html>
