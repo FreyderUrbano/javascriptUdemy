@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS ONMOUSEOVER Y ONEMOUSEOUT</title>
+</head>
+<!-- ONMOUSEOVER: PARA EL EJEMPLO SE VA A PASAR EL MOUSE POR ENCIMA DEL TEXTO Y VA A CAMBIAR EL COLOR DE FUENTE
+     ONMOUSEOVER: PARA EL EJEMPLO SE CREA EL METODO mouseSeQuita y se asigna un color al quitar el cursor sobre el texto
+-->
+<body>
+    <h1 id="titulo" onmouseover="mouseEncima(this)" onmouseout="mouseSeQuita(this)">CAMBIO DEL COLOR DE FUENTE</h1>
+    <br/>
+    <script>
+        function mouseEncima(colorRojo){
+            colorRojo.style.color = 'red';
+            colorRojo.style.fontSize = '50px';
+        }
+
+        function mouseSeQuita(colorNegro){
+            colorNegro.style.color = 'blue';
+            colorNegro.style.fontSize = '40px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS ONMOUSEDOWN ONMOUSEUP Y ONCLICK</title>
+</head>
+<!-- 
+    ONMOUSEDOWN: al hacer click sobre el texto se activa una funcion que para el caso hara que el color cambie
+    ONMOUSEUP: al soltar el click sobre el texto se activara una funcion que para el caso colocara un nuevo color
+-->
+<body>
+    <h1 id="titulo" onmousedown="presionarClick(this)" onmouseup="soltarClick(this)" onclick="clicarTexto(this)">TEXTO CAMBIANTE</h1>
+    <br/>
+    <script>
+        function presionarClick(pushSobreElTexto)
+        {
+            console.log("ONMOUSEDOWN");
+            pushSobreElTexto.style.color = 'violet';
+            pushSobreElTexto.style.fontStyle = 'italic bold 20px arial,serif';
+        }
+
+        function soltarClick(dropElTexto)
+        {
+            console.log("OMMOUSEUP");
+            dropElTexto.style.color = 'green';
+            dropElTexto.style.fontStyle = 'italic'
+        }
+
+        function clicarTexto(clickTexto)
+        {
+            console.log("ONCLICK");
+            clickTexto.style.color = 'black';
+        }
+    </script>
+    
+</body>
+</html>
