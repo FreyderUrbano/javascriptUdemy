@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos onfocus y onblur con JavaScript</title>
+</head>
+<!-- ONFOCUS: cuando damos click sobre una caja de texto cambia en este caso el background del elemento input.
+              y al quitar el foco volvera a blanco usando el metodo ONBLUR.  
+-->
+<body>
+    <h1 id="titulo">EVENTOS ONFOCUS Y ONBLUR</h1>
+    Nombre: <input type="text" onfocus="cambiarBackground(this)" onblur="revertirBackground(this)">
+    <br/>
+    <br/>
+    Apellido: <input type="text" onfocus="cambiarBackground(this)" onblur="revertirBackground(this)">
+    <script>
+        function cambiarBackground(cajaNombre)
+        {
+            cajaNombre.style.background = 'red';
+        }
+
+        function revertirBackground(cajaApellido)
+        {
+            cajaApellido.style.background = "white";
+        }
+    </script>
+    
+</body>
+</html>

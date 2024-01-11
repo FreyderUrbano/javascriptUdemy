@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCION FLECHA EN ADDEVENTLISTENER</title>
+</head>
+<!-- FUNCION FLECHA EN ADDEVENTLISTENER: para el input de nombre se muestra como usar la funcion flecha dentro de addeventlistener
+     y para el input apellido se realiza con un funcion normal 
+-->
+<body>
+    <h1>FUNCION FLECHA EN ADDEVENTLSITENER</h1>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+    <script>
+        //PARA NOMBRE CON FUNCION FLECHA
+        document.getElementById('nombre').addEventListener('focus', (eventofocus) => { eventofocus.target.style.background = 'red' });
+        document.getElementById('nombre').addEventListener('blur', (eventoblur) => { eventoblur.target.style.background = '' });
+
+        //PARA APELLIDO CON FUNCION NORMAL
+        document.getElementById('apellido').addEventListener('focus', cambiarBackground);
+        document.getElementById('apellido').addEventListener('blur', revertirBackground);
+
+        function cambiarBackground(eventoFocus)
+        {
+            let inputNombre = eventoFocus.target;
+            inputNombre.style.background = 'red';
+        }
+
+        function revertirBackground(eventoBlur)
+        {
+            let inputApellido = eventoBlur.target;
+            inputApellido.style.background = "";
+        }
+
+
+   
+
+    </script>
+
+</body>
+</html>

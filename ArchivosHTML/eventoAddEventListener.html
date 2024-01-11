@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO ADDEVENTLISTENER</title>
+</head>
+<!-- 
+    ADDEVENTLISTENER: para el ejemplo se crean dos inputs nombre y apellido se les asigna un id y en el script mediante document.getelementById 
+                      se trae el objeto input, y con addEvenListener se le asocian varios eventos llamando el evento sin on y una referencia del 
+                      metodo o funcion (que es una funcion tipo callback) sin llaves para el caso focus no onfocus y cambiar y no cambiar()
+ -->
+<body>
+
+    <h1 id="titulo">EVENTO ADDEVENTLISTENER</h1>
+
+    Nombre: <input id="nombre" type="text">
+    <br><br>
+    Apellido: <input id="apellido" type="text">
+
+    <script>
+        //PARA EL INPUT NOMBRE
+        document.getElementById('nombre').addEventListener('focus', cambiarBackgroundInput);
+        document.getElementById('nombre').addEventListener('blur', revertirBackgroundInput);
+
+        function cambiarBackgroundInput(eventofocus)
+        {
+           let componenteInputNombre = eventofocus.target; //la propiedad target hacer referencia al elevento que lanzo este evento 
+                                                           //similar al funcionamiento de this que apunta al elemento en este caso input
+           componenteInputNombre.style.background = 'yellow';
+        }
+
+        function revertirBackgroundInput(eventoBlur)
+        {
+            let componenteInputNombre = eventoBlur.target;
+            componenteInputNombre.style.background = 'white';
+        }
+
+        //PARA EL INPUT APELLIDO
+        document.getElementById('apellido').addEventListener('focus', cambiarBackgroundInput);
+        document.getElementById('apellido').addEventListener('blur', revertirBackgroundInput);
+
+        // function cambiarBackgroundInputApellido(eventofocus)
+        // {
+        //     let componenteInputApellido = eventofocus.target;
+        //     componenteInputApellido.style.background = "blue";
+        // }
+
+        // function revertirBackgroundInputApellido(eventoBlur)
+        // {
+        //     let componenteInputApellido = eventoBlur.target;
+        //     componenteInputApellido.style.background = "white";
+        // }
+
+    </script>
+</body>
+</html>

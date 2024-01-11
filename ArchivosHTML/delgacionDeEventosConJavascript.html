@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELEGACION DE EVENTOS CON JAVASCRIPT</title>
+</head>
+<!-- 
+    DELEGACION DE EVENTOS: se colocan los elementos nombre y apellido dentro de un form para aplicarles todos los eventos.
+    Se crea una constante para obtener el objeto y a este se le aplican los eventos focus y blur cambiando el background
+    para que afecte a todos los elementos internos de form en este caso los inputs al final se debe colocar true.
+-->
+<body>
+    <h1 id="titulo">DELEGACION DE EVENTOS CON JAVASCRIPT</h1>
+
+    <form id="forma">
+        Nombre: <input type="text" id="nombre">
+        <br><br>
+        Apellido: <input type="text" id="apellido">
+        <br><br>
+        Direccion: <input type="text" id="direccion">
+    </form>
+    <script>
+       const forma = document.getElementById("forma");
+       forma.addEventListener('focus', (eventoFocus)=> {eventoFocus.target.style.background = 'red'}, true);
+       forma.addEventListener('blur', (eventoBlur)=> {eventoBlur.target.style.background = ''}, true);   
+    </script>
+</body>
+</html>
