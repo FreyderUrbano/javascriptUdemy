@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESUPUESTO</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body class="container m-b 3">
+    <div id="presupuesto">
+        <h3>Presupuesto Disponible</h3>
+        <div id="presupuestoTotal">
+            <h2>Total: </h2>
+        </div>
+        <br>
+        <div class="presupuesto_ingreso limpiarEstilos">
+            <div class="presupuesto_ingreso--texto">Ingreso</div>
+            <div class="derecha limpiarEstilos">
+                <div class="presupuesto_ingreso--valor" id="ingresos"></div>
+                <div class="presupuesto_ingreso--porcentaje">20%</div>
+            </div>
+        </div>
+        <br>
+        <div class="presupuesto_egreso limpiarEstilos">
+            <div class="presupuesto_egreso--texto">Egreso</div>
+            <div class="derecha limpiarEstilos">
+                <div class="presupuesto_egreso--valor" id="egresos"></div>
+                <div class="presupuesto_egreso--porcentaje">50%</div>
+            </div>
+        </div>
+    </div>
+    <div id="registro">
+        <select name="opcion" id="opciones">
+            <option id="positivo" value="positivo">Ingreso</option>
+            <option id="negativo" value="negativo">Egreso</option>
+        </select>
+        <input id="descripcion" type="text" placeholder="Ingresa una descripcion">
+        <input id="valor" type="number" placeholder="Ingresa Valor">
+        <button id="registrar" type="submit" onclick="registrar()">Registrar</button>
+    </div>
+    <br><br>
+    <div id="listados">
+        <div id="entradas">
+            <h3 class="ingreso_titulo" id="h3">Ingresos: </h3>
+            <ul id="ul">
+                <li id="in"></li>
+            </ul>
+        </div>
+        <div class="elemento-eliminar">
+            <button class="elemento_eliminar--btn">
+                <ion-icon name="close-circle-outline"
+                onclick='eliminarIngreso(elementoId)'>
+            </ion-icon>
+            </button>
+        </div>
+        <div id="salidas">
+            <h3 id="h3">Egresos: </h3>
+            <ul id="ul">
+                <li id="eg"></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="js/presupuesto.js"></script>
+</body>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</html>
